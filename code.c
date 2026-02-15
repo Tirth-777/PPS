@@ -3,26 +3,25 @@ int main()
 
 {
 int a,b,c;
-printf("enter num")
+printf("enter num");
 scanf("%d %d %d",&a,&b,&c);
 
 if(a==b && a==c)
 {
-    Printf("three num are equal %d\n,a");
+    printf("three num are equal %d\n");
 }
-if else(a>b && a>c)
+ else if(a>b && a>c)
 {
-    Printf("a is max  %d\n,a");
+    printf("a is max  %d\n",a);
 }
-if else(c>a && c>b)
+ else if(c>a && c>b)
 {
-    Printf("c is max  %d\n,a");
+    printf("c is max  %d\n",c);
 }
 else 
-Printf("b is max  %d\n,a");
-
-
+printf("b is max  %d\n",b);
 }
+
 
 
 
