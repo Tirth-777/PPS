@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    int choice;
+    char str[100], temp[100];
+    int i, len;
+
+    do {
+        printf("\n--- STRING MENU ---\n");
+        printf("1. Reverse String\n");
+        printf("2. Convert to Uppercase\n");
+        printf("3. Convert to Lowercase\n");
+        printf("4. Find Length\n");
+        printf("5. Exit\n");
+
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        getchar(); // clear buffer
+
+        if (choice >= 1 && choice <= 4) {
+            printf("Enter string: ");
+            fgets(str, sizeof(str), stdin);
+            str[strcspn(str, "\n")] = '\0'; // remove newline
+        }
+
+        switch(choice) {
+            case 1:
+                len = strlen(str);
+                for (i = 0; i < len; i++)
+                    temp[i] = str[len - i - 1];
+                temp[len] = '\0';
+                printf("Reversed: %s\n", temp);
+                break;
+
+            case 2:
+                for (i = 0; str[i]; i++)
+                    str[i] = toupper(str[i]);
+                printf("Uppercase: %s\n", str);
+                break;
+
+            case 3:
+                for (i = 0; str[i]; i++)
+                    str[i] = tolower(str[i]);
+                printf("Lowercase: %s\n", str);
+                break;
+
+            case 4:
+                printf("Length = %lu\n", strlen(str));
+                break;
+
+            case 5:
+                printf("Exiting...\n");
+                break;
+
+            default:
+                printf("Invalid choice\n");
+        }
+
+    } while(choice != 5);
+
+    return 0;
+}
