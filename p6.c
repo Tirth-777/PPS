@@ -1,48 +1,76 @@
-#include<stdio.h>
+#include<stdio.h> 
+#include<string.h>
+
+  struct student{
+     char name[30];
+     int rollno;
+     float marks; 
+     char grade;
+};
+
 int main()
+
 {
-   float per,total;
-   int maths,science,hindi,gujrati,ss;
-      printf("\nmaths=");
-      scanf("%d",&maths );
-      printf("\nscience=");
-      scanf("%d",&science);
-      printf("\nhindi=");
-      scanf("%d",&hindi);
-      printf("\ngujrati=");
-      scanf("%d",&gujrati);
-      printf("\nss=");
-      scanf("%d",&ss);
-
-total=maths+science+hindi+gujrati+ss;
-per= total/500*100;
-printf("\n obtain mask=%f",total);
-   if(per>=90)
-{
-   printf("grade=a");
-}
-    else if (per>=75)
-{
-   printf("grade=b");
-}
-else if (per>=60)
-{
-   printf("grade=c");
-}
-else if (per>=40)
-{
-   printf("grade=d");
-}
- else (per<=40)
-{
-   printf("fail");
-}
-
-
-
-
-
-
+ int n,i;
+ 
+  printf("enter number of student:");
+  scanf("%d",&n);
+  
+  
+  struct student S[n]; 
+  
+  for(i=0;i<n;i++)
+  {
+  
+  
+  printf("enter details of student\n %d",i+1);
+ 
+   printf("\nenter name of student: ");
+   scanf(" %[^\n]",S[i].name);
+  
+ 
+ 
+   printf("\nenter Rollno of student:");   
+   scanf("%d",&S[i].rollno);
+  
+   printf("enter marks of student:\n");
+   scanf("%2f",&S[i].marks);
+  
+   
+  printf("\nenter grade of student: ");
+  scanf(" %c",&S[i].grade);
+  
+  
+  }
+  
+  printf("\n ===== student ===== \n:");  
+  
+  
+  for(i=0;i<n;i++)
+  {
+  
+  printf("enter details of student\n %d",i+1);
+ 
+   printf("enter name of student:");
+  
+  printf("enter Rollno of student:"); 
+  
+  printf("enter marks of student:");
+ 
+  printf("enter grade of student:");
+  
+  }
+  
+    return 0; 
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 
