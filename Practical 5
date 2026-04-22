@@ -26,7 +26,7 @@ int main() {
                 break;
             }
 
-            printf("Enter the number of elements to allocate: ");
+            printf("Enter  number of elements to allocate: ");
             scanf("%d", &size);
 
             if (size <= 0) {
