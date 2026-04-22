@@ -6,18 +6,18 @@ int main() {
     FILE *fp, *fodd, *feven;
     int num;
 
-    // Open files
-    fp = fopen("data.txt", "r");      // input file
-    fodd = fopen("odd.txt", "w");     // odd numbers file
-    feven = fopen("even.txt", "w");   // even numbers file
+    
+    fp = fopen("data.txt", "r");      
+    fodd = fopen("odd.txt", "w");    
+    feven = fopen("even.txt", "w");   
 
-    // Check if file opened successfully
+    
     if (fp == NULL) {
         printf("Error opening file 'data.txt'\n");
         return 1;
     }
 
-    // Read numbers from file and separate them
+    
     while (fscanf(fp, "%d", &num) != EOF) {
         if (num % 2 == 0) {
             fprintf(feven, "%d ", num);
@@ -26,7 +26,7 @@ int main() {
         }
     }
 
-    // Close all files
+    
     fclose(fp);
     fclose(fodd);
     fclose(feven);
