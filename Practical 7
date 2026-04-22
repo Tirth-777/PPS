@@ -52,7 +52,7 @@ void appendFile() {
     printf("Enter file name: ");
     scanf("%s", filename);
 
-    FILE *fp = fopen(filename, "a"); // append mode
+    FILE *fp = fopen(filename, "a"); 
 
     if (fp == NULL) {
         printf("Error: Unable to open file.\n");
@@ -75,7 +75,7 @@ void deleteContents() {
     printf("Enter file name: ");
     scanf("%s", filename);
 
-    FILE *fp = fopen(filename, "w"); // clears file contents
+    FILE *fp = fopen(filename, "w"); 
 
     if (fp == NULL) {
         printf("Error: Unable to open file.\n");
